@@ -1,3 +1,3 @@
 module.exports = {
-    dbURL: 'mongodb://localhost/event-ptp'
+    dbURL: 'mongodb://localhost/ptp'
 }
