@@ -4,7 +4,6 @@ const Schema   = mongoose.Schema;
 const EventsSchema = new Schema({
   eventname: String,
   eventdescription: String,
-  eventdate: Date,
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });
