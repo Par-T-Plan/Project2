@@ -18,6 +18,7 @@ mongoose.connect(dbURL)
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
+// const event = require('./routes/event');
 
 const app = express();
 
