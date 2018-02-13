@@ -26,11 +26,7 @@ Event.create(events, (err, eventsCreated) => {
             {$push: {"eventOwner" : u._id }},{new : true}
         ).then(u => console.log(u));
     });
-   
-    
-    //mongoose.connection.close();
+
 });
 
-  //Cuando termino de crear todos los eventos
-  //Los tengo que buscar y ponerselos a los usuarios
 

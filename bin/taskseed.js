@@ -29,8 +29,6 @@ const tasks = [
   }
 ];
 
-// Task.collection.drop();
-
 Task.create(tasks, (err, tasksCreated) => {
   if (err) {
  
@@ -44,5 +42,5 @@ Task.create(tasks, (err, tasksCreated) => {
         {$push: {"task" : u._id }},{new : true}
     ).then(u => console.log(u));
 });
-  // mongoose.connection.close();
+  
 });
