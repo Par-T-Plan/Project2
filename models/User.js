@@ -5,10 +5,10 @@ const userSchema = new Schema(
   {
     username: String,
     password: String,
-    eventOwner:[],
-    eventGuess:[],
+    eventOwner:[{type:Schema.Types.ObjectId,ref:"User"}],
+    eventGuess:[{type:Schema.Types.ObjectId,ref:"User"}],
   }
-);
+ );
 
 const User = mongoose.model("User", userSchema);
 

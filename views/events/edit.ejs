@@ -1,0 +1,43 @@
+<style>
+    #map {
+        height: 400px;
+        width: 600px
+    }
+</style>
+
+<form id="form" action="/event/show/<%= event._id %>/edit" method="POST">
+    <input id="lat" name="lat" value="<%= event.lat %>" placeholder="Latitude" style="visibility:hidden">
+    <input id="lon" name="log" value="<%= event.log %>" placeholder="Longitude" style="visibility:hidden">
+
+    <br>
+    <label for="name">Name</label>
+    <br>
+    <input type="text" name="name" value="<%= event.name %>" placeholder="<%= event.name %>">
+
+    <br>
+    <br>
+    <label for="description">Description</label>
+    <br>
+    <input type="text" name="description" value="<%= event.description %>" placeholder="<%= event.description %>">
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <label for="city">City</label>
+    <br>
+    <input type="text" name="city" value="<%= event.city %>" placeholder="<%= event.city %>">
+    <br>
+    <br>
+
+    <button>Create Event</button>
+</form>
+
+
+<input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+<div id="map"></div>
+<br></br>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE3wzxrBK16zMljFyGq294DTotwbl85TY&libraries=places"></script>
+<script type="text/javascript" src="/javascript/map.js"></script>

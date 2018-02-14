@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 const Event = require('../models/Event');
 const User = require('../models/User');
+const Task = require('../models/Task');
 
 const EventsSchema = new Schema({
   name: String,
@@ -10,7 +11,7 @@ const EventsSchema = new Schema({
     lat = Number,
     lng = Number
      ],
-  task : [],
+  task : [{type:Schema.Types.ObjectId,ref:"Task"}],
   owner_id: {type: Schema.Types.ObjectId,ref:"User"},
 });
 

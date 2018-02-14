@@ -18,7 +18,7 @@ mongoose.connect(dbURL)
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
-// const event = require('./routes/event');
+const event = require('./routes/event');
 
 const app = express();
 
@@ -42,6 +42,7 @@ app.use(session({
     ttl: 24 * 60 * 60 // 1 day
   })
 }));
+
 passportConfig(app);
 
 app.use((req,res,next) => {
@@ -52,6 +53,7 @@ app.use((req,res,next) => {
 
 app.use('/', index);
 app.use('/auth', auth);
+app.use('/event', event);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

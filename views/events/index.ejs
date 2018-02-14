@@ -1,22 +1,3 @@
+<h1>Eventos</h1>
 
-<div id="container">
-    <h2>Hi @
-        <%= user.username %>!</h2>
-    <div id="container">
-        <a href="/tweets/new">New event</a><br>
-        <a href="/logout">Logout</a><br>
-        <a href="/">timeline</a><br>
-        <h2>@
-            <%= username %> events</h2>
-        <% events.forEach(function(tweet) { %>
-            <div class="event-container">
-                <p>
-                    <%= event.event %>
-                </p>
-                <p class="date">
-                    <%= moment(tweet.created_at).format("LL, LTS") %>
-                </p>
-            </div>
-            <% }) %>
-    </div>
-</div>
+<p><%= event %></p>
