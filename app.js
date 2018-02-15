@@ -10,6 +10,7 @@ const MongoStore = require("connect-mongo")(session);
 const debug = require('debug')(`ptp`)
 const passportConfig = require('./passport')
 const {dbURL} = require('./config');
+const expressLayouts = require('express-layouts');
 
 mongoose.connect(dbURL)
         .then(() => debug(`Connected to ${dbURL}`))
@@ -19,12 +20,15 @@ mongoose.connect(dbURL)
 const index = require('./routes/index');
 const auth = require('./routes/auth');
 const event = require('./routes/event');
+const task = require('./routes/task');
 
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('layout', 'layouts/main');
+app.use(expressLayouts);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -51,9 +55,11 @@ app.use((req,res,next) => {
   next();
 }) 
 
+
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/event', event);
+app.use('/task', task);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

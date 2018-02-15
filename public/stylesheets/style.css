@@ -1,8 +1,22 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
+ }
+ 
+ a {
   color: #00B7FF;
-}
+ }
+ 
+ nav.navbar {
+  box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
+  margin-bottom: 0;
+ }
+ .img-responsive {
+  width: 500px;
+  height: 400px;
+ }
+ .img-responsive2{
+  width: 400px;
+  height: 300px;
+  margin-bottom: 25px
+ }

@@ -10,7 +10,7 @@ const events = [
    description: "Ruta de descenso urbano por la capital del reino",
    location : [lat = 40.41, lng = -3.70],
    task : [],
-   owner_id: "5a82de18203101202627c50f"
+   owner_id: "5a8578905b24c22d7c60bbd1"
  }
 
 ];

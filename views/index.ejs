@@ -8,16 +8,19 @@
     <p>Welcome to <%= title %></p>
     <% if(!user) { %>
       <ul>
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/signup">Signup</a></li>
+        <li><a href="/auth/login"><button>Log In</button></a></li>
+        <li><a href="/auth/signup"><button>Sign Up</button></a></li>
       </ul>
     <% } else { %>
       <h2>Hola <%= user.username %></h2>
-      <img src="/images/descarga.jpeg" alt=""/>
+      <img src="/images/party.jpg" alt=""/>
     </br>
-      <a href="/private">Ver a los simpson</a>
-      <a href="/onlyme?id=<%= user._id %>">Onlyme</a>
-      <a href="/auth/logout">Logout</a>
+      <!-- <a href="/private">Ver a los simpson</a> -->
+      <!-- <a href="/onlyme?id=<%= user._id %>">Onlyme</a> -->
+     <a href="/auth/logout"><button>Log Out</button></a>
+      <a href="/event/new"><button>Create Event</button></a>
+      <a href="/event/showme"><button>Edit MyEvent</button></a>
     <% } %>
   </body>
 </html>
+

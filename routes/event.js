@@ -6,7 +6,7 @@ const User = require("../models/User");
 const Event = require("../models/Event");
 const Task = require("../models/Task");
 const bcryptSalt = 10;
-const eventsController = express.Router();
+
 const moment = require("moment");
 
 eventRoutes.get("/show", (req, res, next) => {

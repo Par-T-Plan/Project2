@@ -9,23 +9,23 @@ const tasks = [
   {
     name: "Llevar vasos",
     description: "Aportar una cantidad exacta de vasos",
-    event_id:"5a82e6452d92ea2a5af2cac7",
+    event_id:"5a8578c3695b422e2a0aac65",
     status:false,
-    ownerTask: "5a82de18203101202627c50f"
+    ownerTask: "5a8578905b24c22d7c60bbd1"
   },
   {
     name: "Llevar bolsa de hielos",
     description: "Aportar una cantidad exacta de hielos",
-    event_id:"5a82e6452d92ea2a5af2cac7",
+    event_id:"5a8578c3695b422e2a0aac65",
     status:false,
-    ownerTask: "5a82de18203101202627c50f"
+    ownerTask: "5a8578905b24c22d7c60bbd1"
   },
   {
     name: "Llevar platos",
     description: "Aportar una cantidad exacta de platos",
-    event_id:"5a82e6452d92ea2a5af2cac7",
+    event_id:"5a8578c3695b422e2a0aac65",
     status:false,
-    ownerTask: "5a82de18203101202627c50f"
+    ownerTask: "5a8578905b24c22d7c60bbd1"
   }
 ];
 
@@ -38,7 +38,7 @@ Task.create(tasks, (err, tasksCreated) => {
   tasksCreated.forEach((u) => {
     console.log(`task added ${u.owner_id}`)
     Event.update(
-        { "_id" : "5a8306518a2c3b3c03a621f9" }, 
+        { "_id" : "5a8578c3695b422e2a0aac65" }, 
         {$push: {"task" : u._id }},{new : true}
     ).then(u => console.log(u));
 });
