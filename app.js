@@ -51,7 +51,7 @@ passportConfig(app);
 
 app.use((req,res,next) => {
   res.locals.user = req.user;
-  res.locals.title = 'Choose a Role Plan';
+  res.locals.title = 'Par-T-Plan';
   next();
 }) 
 

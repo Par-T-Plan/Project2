@@ -87,7 +87,7 @@ eventRoutes.post("/show/:id/edit", (req, res, next) => {
     if (err) {
       console.log(err);
     }
-    res.redirect(`/event/show/${result._id}/detail`);
+    res.redirect(`/event/show/`);
   });
 });
 
