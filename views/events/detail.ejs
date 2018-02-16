@@ -1,25 +1,19 @@
-
 <h1>Mis Tareas</h1>
 <p><%= event.name %></p>
 
 <% event.task.forEach((e) => { %>
-   nombre tarea:<p><%= e.name %></p>
-    descripción de tarea:<p><%= e.description %></p>
-
-    <a href="/task/<%= e._id %>/edit"><button>Editar Tarea</button></a>
-    <a href="/task/<%= e._id %>/delete"><button>Borrar Tarea</button></a>
-<hr>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tarea: <%= e.name %></h3>
+        </div>
+        <div class="panel-body">
+            Descripción de tarea:
+            <p><%= e.description %></p>
+            <a href="/task/<%= e._id %>/edit" class="btn btn-primary">Editar Tarea</a>
+            <a href="/task/<%= e._id %>/delete"  class="btn btn-default">Borrar Tarea</a>
+        </div>
+    </div>
 <% }) %>
 
 
-
-
-
-
-
-
-
-
-
-<p><%= user %></p>
-<a href="/task/<%= event._id %>/new"><button>Añadir tarea al evento</button></a>
+<a href="/task/<%= event._id %>/new" class="btn btn-success">Añadir tarea al evento</a>

@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
-    dbURL: 'mongodb://localhost/ptp'
+    dbURL: process.env.DB_URL
 }

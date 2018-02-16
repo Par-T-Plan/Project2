@@ -38,7 +38,7 @@ const moment = require("moment");
 });
 
 taskRoutes.get("/:id/delete", (req, res, next) => {
-  Event.findByIdAndRemove(req.params.id, (err, obj) => {
+  Task.findByIdAndRemove(req.params.id, (err, obj) => {
     if (err) {
       return next(err);
     }

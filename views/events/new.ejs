@@ -12,35 +12,29 @@
 <form id="form" action="/event/new" method="POST">
   <input id="lat" name="lat" placeholder="Latitude" style="visibility:hidden">
   <input id="lon" name="log" placeholder="Longitude" style="visibility:hidden">
-
-  <label for="name">Name</label>
-  <br>
-  <input type="text" name="name" placeholder="">
-
-  <br>
-  <br>
-  <label for="description">Description</label>
-  <br>
-  <input type="text" name="description" placeholder="">
-  <br>
-  <br>
-
-  <br>
-  <br>
-  <label for="city">City</label>
-  <br>
-  <input type="text" name="city" placeholder="">
-  <br>
-  <br>
-
-  <button>Create Event</button>
-</form>
-
+  
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" name="name" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text" class="form-control" name="description" placeholder="Descripción">
+      </div>
+      <div class="form-group">
+        <label for="city">Ciudad</label>
+        <input type="text" class="form-control" name="city" placeholder="Nombre Ciudad">
+        
+      </div>
+      
+      <button type="submit" class="btn btn-success">Crear Evento</button>
+    </form>
+<br>
 
 <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-<div id="map"></div>
+<div id="map" class = "mapa" ></div>
 <br></br>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE3wzxrBK16zMljFyGq294DTotwbl85TY&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE3wzxrBK16zMljFyGq294DTotwbl85TY&libraries=places" "></script>
 <script type="text/javascript" src="/javascript/map.js"></script>
