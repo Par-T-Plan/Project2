@@ -5,10 +5,14 @@
 
     <p><%= e.name %></p>
     <p><%= e.description %></p>
+    <p><%= e.location %></p>
+    <p><%= e.task %></p>
+ 
     <a href="/event/show/<%= e._id %>/edit"><button>Editar Evento</button></a>
     <a href="/event/show/<%= e._id %>/delete"><button>Borrar Evento</button></a>
+   
     <hr>
 <% }) %>
 
 <a href="/event/showme" class="btn btn-default btn-lg" role="button">Mis Eventos</a>
-<a href="/event/new" class="btn btn-default btn-lg" role="button">Crear Evento</a>
+<a href="/" class="btn btn-default btn-lg" role="button">Home</a>

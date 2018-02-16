@@ -1,5 +1,25 @@
+
+<h1>Mis Tareas</h1>
 <p><%= event.name %></p>
-<p><%= event.task %></p>
+
+<% event.task.forEach((e) => { %>
+   nombre tarea:<p><%= e.name %></p>
+    descripción de tarea:<p><%= e.description %></p>
+
+    <a href="/task/<%= e._id %>/edit"><button>Editar Tarea</button></a>
+    <a href="/task/<%= e._id %>/delete"><button>Borrar Tarea</button></a>
+<hr>
+<% }) %>
+
+
+
+
+
+
+
+
+
+
+
 <p><%= user %></p>
-<a href="/task/<%= event._id %>/new"><button>New Task</button></a>
-<a href="/task/<%= event._id %>/edit"><button>Edit Task</button></a>
+<a href="/task/<%= event._id %>/new"><button>Añadir tarea al evento</button></a>

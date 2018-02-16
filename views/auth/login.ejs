@@ -1,29 +1,21 @@
-<!-- <form action="/auth/login" method="POST">
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" name="username">
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password">
-    </div>
-    <div>
-      <input type="submit" value="Log In">
-    </div>
-</form> -->
-<form action="/auth/login" method="POST">
-  <div><img src="/images/cartel.jpg" class="img-responsive2" alt="Responsive image">
+
+
  
+  
+ 
+ <form class="form-inline" action="/auth/login" method="POST">
+  <div><img src="/images/cartel.jpg" class="img-responsive2" alt="Responsive image"></div>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputEmail3">UserName</label>
+    <input type="text" class="form-control" id="exampleInputEmail3"  name="username" placeholder="UserName">
   </div>
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" name="username">
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" name="password">
-    </div>
-    <div>
-      <input type="submit" value="Log In">
-    </div>
- </form>
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputPassword3">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword3"  name="password" placeholder="Password">
+  </div>
+
+  <div>
+    
+   <input type="submit" value="Log In">
+  </div>
+</form>
