@@ -13,6 +13,8 @@ const passportConfig = require('./passport')
 const {dbURL} = require('./config');
 const expressLayouts = require('express-layouts');
 
+console.log(dbURL)
+
 mongoose.connect(dbURL)
         .then(() => debug(`Connected to ${dbURL}`))
         .catch(e => console.log(e))

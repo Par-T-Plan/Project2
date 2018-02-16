@@ -2,10 +2,18 @@
 
 
 <% event.forEach((e) => { %>
-
-    <p><%= e.name %></p>
+    <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Tarea: <%= e.name %></h3>
+            </div>
+            <div class="panel-body">
+   Nombre del Evento:
+                <p><%= e.name %></p>
+                Descripción del evento:
     <p><%= e.description %></p>
+    Localización:
     <p><%= e.location %></p>
+    Tareas del evento:
     <p><%= e.task %></p>
  
     <a href="/event/show/<%= e._id %>/edit"><button>Editar Evento</button></a>
@@ -14,5 +22,5 @@
     <hr>
 <% }) %>
 
-<a href="/event/showme" class="btn btn-default btn-lg" role="button">Mis Eventos</a>
+<a href="/event/showme" class="btn btn-primary btn-lg" role="button">Mis Eventos</a>
 <a href="/" class="btn btn-default btn-lg" role="button">Home</a>
